@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "fishingdemo:fishing_poi",
+      "required": false
+    }
+  ]
+}

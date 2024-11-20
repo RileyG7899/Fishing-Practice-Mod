@@ -1,5 +1,6 @@
 package net.barrel.fishingdemo;
 
+import net.barrel.fishingdemo.villager.ModVillagers;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -21,8 +22,8 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(ExampleMod.MOD_ID)
-public class ExampleMod
+@Mod(FishingDemo.MOD_ID)
+public class FishingDemo
 {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "fishingdemo";
@@ -31,8 +32,12 @@ public class ExampleMod
    
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public ExampleMod(IEventBus modEventBus, ModContainer modContainer)
+    public FishingDemo(IEventBus modEventBus, ModContainer modContainer)
     {
+
+        ModVillagers.register(modEventBus);
+
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
