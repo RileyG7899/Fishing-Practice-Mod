@@ -1,6 +1,10 @@
 package net.barrel.fishingdemo;
 
+import net.barrel.fishingdemo.block.ModBlocks;
+import net.barrel.fishingdemo.item.ModCreativeModeTabs;
+import net.barrel.fishingdemo.item.ModItems;
 import net.barrel.fishingdemo.villager.ModVillagers;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -35,7 +39,11 @@ public class FishingDemo
     public FishingDemo(IEventBus modEventBus, ModContainer modContainer)
     {
 
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
         ModVillagers.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
         // Register the commonSetup method for modloading
@@ -69,7 +77,10 @@ public class FishingDemo
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            //event.accept(ModItems.BLACK_OPAL);
+            //event.accept(ModItems.RAW_BLACK_OPAL);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

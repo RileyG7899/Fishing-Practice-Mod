@@ -26,12 +26,12 @@ public class ModEvents {
         {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
-            trades.get(1).add((pTrader, randomSource) -> new MerchantOffer(
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.EMERALD, 3),
                     new ItemStack(Items.FISHING_ROD, 1), 2, 4, 0.05f
             ));
 
-            trades.get(2).add((pTrader, randomSource) -> new MerchantOffer(
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.COD, 5),
                     new ItemStack(Items.EMERALD, 2), 4, 3, 0.05f
             ));
