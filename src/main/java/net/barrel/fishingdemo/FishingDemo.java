@@ -39,15 +39,15 @@ public class FishingDemo
     public FishingDemo(IEventBus modEventBus, ModContainer modContainer)
     {
 
-        ModCreativeModeTabs.register(modEventBus);
-
-        ModItems.register(modEventBus);
-        ModVillagers.register(modEventBus);
-        ModBlocks.register(modEventBus);
-
-
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModVillagers.register(modEventBus);
+
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.

@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     {
-      "id": "fishingdemo:fishing_poi",
+      "id": "fishingdemo:magic_poi",
       "required": false
     }
   ]
