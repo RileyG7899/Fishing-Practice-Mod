@@ -1,6 +1,6 @@
 {
   "block.fishingdemo.fishing_station": "Fishing Station",
 
-  "entity.minecraft.villager.fishingdemo.fishing_master": "Fishing Master",
+  "entity.minecraft.villager.fishingdemo.master_fisherman": "Master Fisherman",
   "itemGroup.fishingdemo.fishing_items_tab": "Fishing Items"
 }
