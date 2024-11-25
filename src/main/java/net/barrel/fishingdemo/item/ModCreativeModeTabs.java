@@ -24,6 +24,9 @@ public class ModCreativeModeTabs {
                         pOutput.accept(Items.COD);
                         pOutput.accept(Items.TROPICAL_FISH);
                         pOutput.accept(ModBlocks.FISHING_STATION);
+                        pOutput.accept(ModItems.MASTER_FISHING_ROD_BODY);
+                        pOutput.accept(ModItems.MASTER_FISHING_ROD_REEL);
+                        pOutput.accept(ModItems.MASTER_FISHING_ROD_HOOK);
                     })
                     .build());
 
