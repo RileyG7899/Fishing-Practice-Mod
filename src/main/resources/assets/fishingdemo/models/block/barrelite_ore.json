@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "fishingdemo:block/fishing_station"
+    "all": "fishingdemo:block/barrelite_ore"
   }
 }

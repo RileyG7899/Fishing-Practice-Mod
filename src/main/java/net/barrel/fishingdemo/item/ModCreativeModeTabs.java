@@ -27,6 +27,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.MASTER_FISHING_ROD_BODY);
                         pOutput.accept(ModItems.MASTER_FISHING_ROD_REEL);
                         pOutput.accept(ModItems.MASTER_FISHING_ROD_HOOK);
+                        pOutput.accept(ModItems.BARRELITE_SHARD);
+                        pOutput.accept(ModBlocks.BARRELITE_ORE);
                     })
                     .build());
 

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "fishingdemo:item/master_fishing_rod_hook"
+    "layer0": "fishingdemo:item/barrelite_shard"
   }
 }

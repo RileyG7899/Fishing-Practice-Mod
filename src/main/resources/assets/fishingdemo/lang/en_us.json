@@ -4,6 +4,9 @@
   "item.fishingdemo.master_fishing_rod_body": "Master Fishing Rod Body",
   "item.fishingdemo.master_fishing_rod_reel": "Master Fishing Rod Reel",
   "item.fishingdemo.master_fishing_rod_hook": "Master Fishing Rod Hook",
+  "item.fishingdemo.barrelite_shard": "Barrelite Shard",
+
+  "block.fishingdemo.barrelite_ore": "Barrelite Ore",
 
   "entity.minecraft.villager.fishingdemo.master_fisherman": "Master Fisherman",
   "itemGroup.fishingdemo.fishing_items_tab": "Fishing Items"
