@@ -2,6 +2,7 @@ package net.barrel.fishingdemo.datagen;
 
 import net.barrel.fishingdemo.FishingDemo;
 import net.barrel.fishingdemo.block.ModBlocks;
+import net.barrel.fishingdemo.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -18,7 +19,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
+        List<ItemLike> FISHING_SMELTABLES = List.of(ModBlocks.BARRELITE_ORE);
 
+        oreSmelting(pRecipeOutput, FISHING_SMELTABLES, RecipeCategory.MISC, ModItems.BARRELITE_SHARD,
+                0.25f, 200, "barrelite_shard");
+        oreBlasting(pRecipeOutput, FISHING_SMELTABLES, RecipeCategory.MISC, ModItems.BARRELITE_SHARD,
+                0.25f, 100, "barrelite_shard");
 
     }
     protected static void oreSmelting(RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

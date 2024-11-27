@@ -18,6 +18,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
 
         blockWithItem(ModBlocks.FISHING_STATION);
+        blockWithItem(ModBlocks.BARRELITE_ORE);
     }
 
     private void blockWithItem(DeferredBlock<Block> deferredBlock) {
