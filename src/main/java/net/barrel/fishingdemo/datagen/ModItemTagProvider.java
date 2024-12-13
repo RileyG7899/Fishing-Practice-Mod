@@ -1,6 +1,8 @@
 package net.barrel.fishingdemo.datagen;
 
 import net.barrel.fishingdemo.FishingDemo;
+import net.barrel.fishingdemo.item.ModItems;
+import net.barrel.fishingdemo.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -18,7 +20,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-
+        tag(ModTags.Items.BAIT_ITEMS)
+                .add(ModItems.WORM.get());
 
     }
 }

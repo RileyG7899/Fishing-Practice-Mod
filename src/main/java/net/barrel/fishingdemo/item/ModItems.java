@@ -13,6 +13,8 @@ public class ModItems {
     public static final DeferredItem<Item> MASTER_FISHING_ROD_REEL = ITEMS.registerSimpleItem("master_fishing_rod_reel");
     public static final DeferredItem<Item> MASTER_FISHING_ROD_HOOK = ITEMS.registerSimpleItem("master_fishing_rod_hook");
 
+    public static final DeferredItem<Item> WORM = ITEMS.registerSimpleItem("worm");
+
 
 
     public static final DeferredItem<Item> BARRELITE_SHARD = ITEMS.registerSimpleItem("barrelite_shard");

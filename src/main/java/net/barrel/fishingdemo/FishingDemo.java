@@ -1,10 +1,14 @@
 package net.barrel.fishingdemo;
 
 import net.barrel.fishingdemo.block.ModBlocks;
+import net.barrel.fishingdemo.block.custom.entity.ModBlockEntities;
 import net.barrel.fishingdemo.item.ModCreativeModeTabs;
 import net.barrel.fishingdemo.item.ModItems;
+import net.barrel.fishingdemo.screen.ModMenuTypes;
+import net.barrel.fishingdemo.screen.custom.FishingTrapScreen;
 import net.barrel.fishingdemo.villager.ModVillagers;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -48,6 +52,8 @@ public class FishingDemo
         ModItems.register(modEventBus);
         ModVillagers.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
@@ -100,6 +106,13 @@ public class FishingDemo
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
+
+        }
+
+        @SubscribeEvent
+        public static void registerScreens (RegisterMenuScreensEvent event) {
+            event.register(ModMenuTypes.FISHING_TRAP_MENU.get(), FishingTrapScreen::new);
         }
     }
 }

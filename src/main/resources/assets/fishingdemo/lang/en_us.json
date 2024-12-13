@@ -1,5 +1,7 @@
 {
   "block.fishingdemo.fishing_station": "Fishing Station",
+  "block.fishingdemo.fishing_trap_block": "Fishing Trap",
+  "blockentity.fishingdemo.fishing_trap": "Fishing Trap",
 
   "item.fishingdemo.master_fishing_rod_body": "Master Fishing Rod Body",
   "item.fishingdemo.master_fishing_rod_reel": "Master Fishing Rod Reel",
@@ -7,6 +9,9 @@
   "item.fishingdemo.barrelite_shard": "Barrelite Shard",
 
   "block.fishingdemo.barrelite_ore": "Barrelite Ore",
+
+
+  "item.fishingdemo.worm": "Worm",
 
   "entity.minecraft.villager.fishingdemo.master_fisherman": "Master Fisherman",
   "itemGroup.fishingdemo.fishing_items_tab": "Fishing Items"

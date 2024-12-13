@@ -17,5 +17,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.MASTER_FISHING_ROD_REEL.get());
         basicItem(ModItems.MASTER_FISHING_ROD_HOOK.get());
         basicItem(ModItems.BARRELITE_SHARD.get());
+        basicItem(ModItems.WORM.get());
     }
 }

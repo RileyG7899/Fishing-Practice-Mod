@@ -28,6 +28,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.FISHING_STATION.get());
+        dropSelf(ModBlocks.FISHING_TRAP_BLOCK.get());
         dropSelf(ModBlocks.BARRELITE_ORE.get());
 
 

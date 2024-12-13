@@ -18,7 +18,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
 
         blockWithItem(ModBlocks.FISHING_STATION);
+        blockWithItem(ModBlocks.FISHING_TRAP_BLOCK);
         blockWithItem(ModBlocks.BARRELITE_ORE);
+
     }
 
     private void blockWithItem(DeferredBlock<Block> deferredBlock) {
@@ -26,11 +28,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void blockItem(DeferredBlock<Block> deferredBlock) {
-        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("mccourse:block/" + deferredBlock.getId().getPath()));
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("fishingdemo:block/" + deferredBlock.getId().getPath()));
     }
 
     private void blockItem(DeferredBlock<Block> deferredBlock, String appendix) {
-        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("mccourse:block/" + deferredBlock.getId().getPath() + appendix));
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("fishingdemo:block/" + deferredBlock.getId().getPath() + appendix));
     }
 }
 
