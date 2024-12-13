@@ -1,6 +1,7 @@
 package net.barrel.fishingdemo.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.barrel.fishingdemo.block.custom.entity.ModBlockEntities;
 import net.barrel.fishingdemo.block.custom.entity.custom.FishingTrapBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -55,6 +56,12 @@ public class FishingTrapBlock extends BaseEntityBlock {
         super.onRemove(state, level, pos, newState, movedByPiston);
     }
 
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
+        return level.isClientSide ? null : createTickerHelper(
+                type, ModBlockEntities.FISHING_TRAP_BE.get(), FishingTrapBlockEntity::serverTick
+        );
+    }
 
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player,
